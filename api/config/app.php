@@ -168,6 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
+        Caffeinated\Modules\ModulesServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -178,6 +179,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Modules Service Providers
+         */
+        LStarter\Modules\Core\Providers\ModuleServiceProvider::class
     ],
 
     /*
@@ -228,6 +233,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         // 'Api' => Dingo\Api\Facade\API,
         // 'ApiRoute' => Dingo\Api\Facade\Route,
+        'Module' => Caffeinated\Modules\Facades\Module::class,
 
     ],
 
