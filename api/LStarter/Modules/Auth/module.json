@@ -1,0 +1,8 @@
+{
+    "name": "Auth",
+    "slug": "auth",
+    "version": "1.0",
+    "description": "Authentication Module",
+    "Author": "Guilherme assemany <guilhermeassemany@hotmail.com>",
+    "order": 2
+}

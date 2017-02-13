@@ -1,0 +1,11 @@
+{
+  "name": "lstarter/auth",
+  "description": "Authentication Module.",
+  "keywords": ["auth", "module"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.6.4",
+    "tymon/jwt-auth": "0.5.*"
+  }
+}

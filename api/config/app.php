@@ -179,10 +179,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        /*
-         * Modules Service Providers
-         */
-        LStarter\Modules\Core\Providers\ModuleServiceProvider::class
     ],
 
     /*

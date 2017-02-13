@@ -2,5 +2,7 @@
     "name": "Core",
     "slug": "core",
     "version": "1.0",
-    "description": "Api Core Module"
+    "description": "Api Core Module",
+    "Author": "Guilherme assemany <guilhermeassemany@hotmail.com>",
+    "order": 1
 }
