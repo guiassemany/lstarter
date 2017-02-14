@@ -7,6 +7,6 @@
   "require": {
     "php": ">=5.6.4",
     "tymon/jwt-auth": "0.5.*",
-    "zizaco/entrust": "5.2.x-dev"
+    "santigarcor/laratrust": "3.1.*"
   }
 }

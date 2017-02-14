@@ -4,7 +4,7 @@ namespace LStarter\Modules\Auth\Providers;
 
 use Caffeinated\Modules\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
-use Zizaco\Entrust\EntrustServiceProvider;
+use Laratrust\LaratrustServiceProvider;
 
 
 class ModuleServiceProvider extends ServiceProvider
@@ -31,13 +31,13 @@ class ModuleServiceProvider extends ServiceProvider
       // Module ServiceProviders
       $this->app->register(RouteServiceProvider::class);
       $this->app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
-      $this->app->register(EntrustServiceProvider::class);
+      $this->app->register(LaratrustServiceProvider::class);
 
       // Module Facades
       $loader = AliasLoader::getInstance();
       $loader->alias('JWTAuth', 'Tymon\JWTAuth\Facades\JWTAuth');
       $loader->alias('JWTFactory', 'Tymon\JWTAuth\Facades\JWTFactory');
-      $loader->alias('Entrust', 'Zizaco\Entrust\EntrustFacade');
+      $loader->alias('Laratrust', 'Laratrust\LaratrustFacade');
 
       // @TODO: register middlewares here not in App\Http\Kernel
     }
