@@ -68,6 +68,7 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => LStarter\Modules\Auth\Models\User::class,
+            'table' => 'users',
         ],
 
         // 'users' => [

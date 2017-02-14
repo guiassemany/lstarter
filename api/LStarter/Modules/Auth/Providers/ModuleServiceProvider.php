@@ -4,6 +4,8 @@ namespace LStarter\Modules\Auth\Providers;
 
 use Caffeinated\Modules\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
+use Zizaco\Entrust\EntrustServiceProvider;
+
 
 class ModuleServiceProvider extends ServiceProvider
 {
@@ -26,11 +28,17 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(RouteServiceProvider::class);
-        $this->app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
-        $loader = AliasLoader::getInstance();
-        $loader->alias('JWTAuth', 'Tymon\JWTAuth\Facades\JWTAuth');
-        $loader->alias('JWTFactory', 'Tymon\JWTAuth\Facades\JWTFactory');
-        // @TODO: register middlewares here not in App\Http\Kernel
+      // Module ServiceProviders
+      $this->app->register(RouteServiceProvider::class);
+      $this->app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
+      $this->app->register(EntrustServiceProvider::class);
+
+      // Module Facades
+      $loader = AliasLoader::getInstance();
+      $loader->alias('JWTAuth', 'Tymon\JWTAuth\Facades\JWTAuth');
+      $loader->alias('JWTFactory', 'Tymon\JWTAuth\Facades\JWTFactory');
+      $loader->alias('Entrust', 'Zizaco\Entrust\EntrustFacade');
+
+      // @TODO: register middlewares here not in App\Http\Kernel
     }
 }
